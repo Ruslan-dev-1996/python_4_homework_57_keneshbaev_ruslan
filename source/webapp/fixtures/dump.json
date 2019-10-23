@@ -1,0 +1,272 @@
+[
+{
+  "model": "webapp.tracker",
+  "pk": 1,
+  "fields": {
+    "summary": "snikers",
+    "description": "What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 1,
+    "type": 1,
+    "project": 1,
+    "created_at": "2019-10-23T09:04:13.153Z"
+  }
+},
+{
+  "model": "webapp.tracker",
+  "pk": 2,
+  "fields": {
+    "summary": "mobile",
+    "description": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 2,
+    "type": 2,
+    "project": 2,
+    "created_at": "2019-10-23T09:05:17.356Z"
+  }
+},
+{
+  "model": "webapp.tracker",
+  "pk": 3,
+  "fields": {
+    "summary": "anti",
+    "description": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 3,
+    "type": 3,
+    "project": 3,
+    "created_at": "2019-10-23T09:05:46.382Z"
+  }
+},
+{
+  "model": "webapp.tracker",
+  "pk": 4,
+  "fields": {
+    "summary": "virus",
+    "description": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 4,
+    "type": 4,
+    "project": 4,
+    "created_at": "2019-10-23T09:06:24.569Z"
+  }
+},
+{
+  "model": "webapp.tracker",
+  "pk": 5,
+  "fields": {
+    "summary": "top tem",
+    "description": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 5,
+    "type": 5,
+    "project": 5,
+    "created_at": "2019-10-23T09:07:04.973Z"
+  }
+},
+{
+  "model": "webapp.tracker",
+  "pk": 6,
+  "fields": {
+    "summary": "crosfit",
+    "description": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 6,
+    "type": 6,
+    "project": 6,
+    "created_at": "2019-10-23T09:07:39.596Z"
+  }
+},
+{
+  "model": "webapp.tracker",
+  "pk": 7,
+  "fields": {
+    "summary": "bcaa",
+    "description": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever si",
+    "status": 8,
+    "type": 7,
+    "project": 7,
+    "created_at": "2019-10-23T09:08:01.240Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 1,
+  "fields": {
+    "name": "jinji",
+    "description": "lor",
+    "created_at": "2019-10-23T08:59:11.433Z",
+    "updated_at": "2019-10-23T08:59:11.433Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 2,
+  "fields": {
+    "name": "django",
+    "description": "lorit",
+    "created_at": "2019-10-23T08:59:24.579Z",
+    "updated_at": "2019-10-23T08:59:24.579Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 3,
+  "fields": {
+    "name": "react",
+    "description": "tip",
+    "created_at": "2019-10-23T08:59:39.305Z",
+    "updated_at": "2019-10-23T08:59:39.305Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 4,
+  "fields": {
+    "name": "julian",
+    "description": "rob",
+    "created_at": "2019-10-23T08:59:55.953Z",
+    "updated_at": "2019-10-23T08:59:55.953Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 5,
+  "fields": {
+    "name": "intel",
+    "description": "pen",
+    "created_at": "2019-10-23T09:00:07.831Z",
+    "updated_at": "2019-10-23T09:00:07.831Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 6,
+  "fields": {
+    "name": "pot",
+    "description": "car",
+    "created_at": "2019-10-23T09:00:23.147Z",
+    "updated_at": "2019-10-23T09:00:23.147Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 7,
+  "fields": {
+    "name": "mers",
+    "description": "dav",
+    "created_at": "2019-10-23T09:00:33.825Z",
+    "updated_at": "2019-10-23T09:00:33.825Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "name": "in_progress"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "name": "dev"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "name": "java"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 4,
+  "fields": {
+    "name": "python"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 5,
+  "fields": {
+    "name": "script"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 6,
+  "fields": {
+    "name": "nokia"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 8,
+  "fields": {
+    "name": "samsung"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "type": "task"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "type": "bug"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "type": "type"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 4,
+  "fields": {
+    "type": "big"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 5,
+  "fields": {
+    "type": "energi"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 6,
+  "fields": {
+    "type": "neft"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 7,
+  "fields": {
+    "type": "black"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$kRAm5DCR2s0v$D/7xxEdNj9QhcyaClTRROn48YICeT3VHncUE8XXcRkM=",
+    "last_login": "2019-10-23T08:58:47.518Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-23T08:30:38.188Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
