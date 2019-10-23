@@ -1,3 +1,5 @@
+from django.contrib.auth import authenticate, login
+from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.http import urlencode
 from django.db.models import Q
@@ -79,3 +81,6 @@ class TrackerDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('index')
+
+
+

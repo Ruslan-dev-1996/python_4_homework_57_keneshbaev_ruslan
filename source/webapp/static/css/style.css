@@ -34,7 +34,9 @@ h1 {
     margin: 0;
     display: inline-block;
     color: #fffee8;
+
 }
+
 
 .menu li {
     display: inline-block;
@@ -46,7 +48,12 @@ h1 {
     color: inherit;
     padding: 5px 15px;
 }
+.menu-right {
 
+    float: right;
+    text-align: center;
+
+}
 .menu a:hover {
     color: #ffc122;
     text-decoration: underline;

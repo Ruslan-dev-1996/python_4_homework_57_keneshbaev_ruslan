@@ -17,7 +17,13 @@
 <nav class="navbar">
     <div class="container">
         <ul class="menu">
-            <li><a href="{% url 'index' %}">Главный</a></li>
+             <li><a href="{% url 'index' %}">Главный</a></li>
+             {% if request.user.is_authenticated %}
+                 <li>privet, {{ user }}</li>
+                 <li><a href="{% url 'logout' %}">log out</a></li>
+             {% else %}
+                 <li><a href="{% url 'login' %}">Логин</a></li>
+             {% endif %}
             {% block menu %}{% endblock %}
         </ul>
     </div>

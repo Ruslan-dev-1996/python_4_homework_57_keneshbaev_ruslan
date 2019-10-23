@@ -20,7 +20,7 @@ from webapp.view import IndexView, TrackerView, TrackerCreateView, TrackerUpdate
     StatusUpdateView, TypeUpdateView, StatusDeleteView, TypeDeleteView, \
     ProjectView, ProjectDetailView, ProjectCreateView,  ProjectUpdateView, \
     ProjectDeleteView
-
+from accounts.views import login_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,6 +42,8 @@ urlpatterns = [
     path('project/add/', ProjectCreateView.as_view(), name='project_add'),
     path('project/<int:pk>/update/', ProjectUpdateView.as_view(), name='project_update'),
     path('project/<int:pk>/delete/', ProjectDeleteView.as_view(), name='project_delete'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout')
 
 
 
