@@ -1,4 +1,6 @@
-from django.db.models import Q
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q, ProtectedError
+from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.http import urlencode
 
@@ -45,29 +47,42 @@ class ProjectDetailView(DetailView):
     context_object_name = 'project'
 
 
-class ProjectCreateView(CreateView):
+class ProjectCreateView(LoginRequiredMixin, CreateView):
     template_name = 'project/create_project.html'
     model = Project
     form_class = ProjectForm
-    def get_success_url(self):
-        return reverse('project_view')
 
-class ProjectUpdateView(UpdateView):
+    def get_success_url(self):
+        return reverse('webapp:project_view')
+
+class ProjectUpdateView(LoginRequiredMixin, UpdateView):
     model = Project
     template_name = 'project/update_project.html'
     form_class = ProjectForm
     context_object_name = 'project'
 
     def get_success_url(self):
-        return reverse('project_view')
+        return reverse('webapp:project_view')
 
 
 
-class ProjectDeleteView(DeleteView):
+class ProjectDeleteView(LoginRequiredMixin, DeleteView):
     model = Project
     template_name = 'project/delete_project.html'
     context_object_name = 'project'
     # error = 'error.html'
+    error = 'error.html'
+
+    def delete(self, request, *args, **kwargs):
+        context = {}
+        try:
+            self.object = self.get_object()
+            success_url = self.get_success_url()
+            self.object.delete()
+            return redirect(success_url)
+        except ProtectedError as e:
+            context['error'] = 'Has error'
+            return render(request, 'error.html', context=context)
 
     def get_success_url(self):
-        return reverse('project_view')
+        return reverse('webapp:project_view')

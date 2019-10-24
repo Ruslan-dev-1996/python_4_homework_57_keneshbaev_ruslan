@@ -3,8 +3,8 @@
 {% block title %}{{ tracker.summary }}{% endblock %}
 
 {% block menu %}
-    <li><a href="{% url 'project_update' project.pk %}">Редактировать</a></li>
-    <li><a href="{% url 'project_delete' project.pk %}">Удалить</a></li>
+    <li><a href="{% url 'webapp:project_update' project.pk %}">Редактировать</a></li>
+    <li><a href="{% url 'webapp:project_delete' project.pk %}">Удалить</a></li>
 {% endblock %}
 
 {% block content %}

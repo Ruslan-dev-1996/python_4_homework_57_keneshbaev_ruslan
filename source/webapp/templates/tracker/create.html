@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>Добавить Задачу</h1>
-    <form method="POST" action="{% url 'tracker_add' %}">
+    <form method="POST" action="{% url 'webapp:tracker_add' %}">
         {% include 'partial/tracker_form.html' with button_text="Добавить" %}
     </form>
 {% endblock %}

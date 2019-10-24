@@ -1,4 +1,6 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.http import urlencode
@@ -45,42 +47,44 @@ class IndexView(ListView):
         return None
 
 
-class TrackerView(DetailView):
+class TrackerView(LoginRequiredMixin, DetailView):
     template_name = 'tracker/detailed.html'
     model = Tracker
     context_key = 'tracker'
 
 
 
-class TrackerCreateView(CreateView):
+class TrackerCreateView(LoginRequiredMixin, CreateView):
     template_name = 'tracker/create.html'
     model = Tracker
     form_class = TrackerForm
-    # fields = ['summary', 'description', 'status', 'type']
+
 
     def get_success_url(self):
-        return reverse('tracker_view', kwargs={'pk': self.object.pk})
+        return reverse('webapp:tracker_view', kwargs={'pk': self.object.pk})
 
 
 
 
-class TrackerUpdateView(UpdateView):
+class TrackerUpdateView(LoginRequiredMixin, UpdateView):
     model = Tracker
     template_name = 'tracker/update.html'
     form_class = TrackerForm
     context_object_name = 'issue'
     def get_success_url(self):
-        return reverse('tracker_view', kwargs={'pk': self.object.pk})
+        return reverse('webapp:tracker_view', kwargs={'pk': self.object.pk})
 
 
-class TrackerDeleteView(DeleteView):
+class TrackerDeleteView(LoginRequiredMixin, DeleteView):
     model = Tracker
     template_name = 'tracker/delete.html'
     context_object_name = 'issue'
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
 
 
     def get_success_url(self):
-        return reverse('index')
+        return reverse('webapp:index')
 
 
 
